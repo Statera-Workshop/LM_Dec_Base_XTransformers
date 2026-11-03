@@ -1,0 +1,65 @@
+{
+ "model": "xt_repo",
+ "repo": "LM_2023_x-transformers-pytorch",
+ "target_repo": "LM_Dec_Base_XTransformers",
+ "category": "Base",
+ "upstream": "vendored from RichardMinsooGo/LM_2023_x-transformers-pytorch (see LICENSE in vendor folder if present)",
+ "unified": [
+  "the repository's own x-transformers copy, library defaults (absolute positions)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-11-02 11:38:09",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 251.1,
+    "ms": 21.5,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 135.8,
+    "ms": 8.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 676.4,
+    "ms": 23.9,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 408.5,
+    "ms": 8.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 2310.7,
+    "ms": 55.5,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 1459.5,
+    "ms": 23.9,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 4096,
+   "note": "not supported (model built for <= 2048)"
+  },
+  {
+   "len": 8192,
+   "note": "not supported (model built for <= 2048)"
+  }
+ ],
+ "seconds": 2.8
+}
